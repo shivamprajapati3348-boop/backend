@@ -27,6 +27,10 @@ app.use("/api/v1/product", productRoute)
 app.use("/api/v1/cart", cartRoute)
 app.use("/api/v1/orders", orderRoute)
 
+app.listen(PORT, () => {
+  connectDB();
+  console.log(`server is listening at port :${PORT}`);
+});
 
 
 export default app;
