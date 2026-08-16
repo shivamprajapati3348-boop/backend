@@ -17,7 +17,9 @@ app.use(
 );
 
 app.use(express.json());
-
+app.get("/",(req,res)=>{
+  return res.send("backend")
+})
 app.use("/api/v1/user", userRoute)
 
 app.use("/api/v1/product", productRoute)
